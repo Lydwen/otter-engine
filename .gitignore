@@ -384,3 +384,14 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#CMAKE related
+*.sln
+*.vcxproj
+*.vcxproj.filters
+OtterEngine/out/*
+**/CMakeFiles/*
+*/generate.stamp*
+*/CMakeCache.txt
+*/cmake_install.cmake
+*/CMakeSettings.json
