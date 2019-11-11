@@ -31,5 +31,10 @@ target_include_directories( ${PROJECT_NAME}
 )
 
 #tests
-add_executable(TestsMathEngine tests/Example.cpp)
+add_executable(TestsMathEngine ${SOURCEFILES} ${HEADERS} tests/VectorTest.cpp)
 target_link_libraries(TestsMathEngine PRIVATE gtest_main)
+add_test(NAME example_test COMMAND example)
+#include the include directory for the tests
+target_include_directories( TestsMathEngine
+    PUBLIC ${PROJECT_SOURCE_DIR}/include
+)
