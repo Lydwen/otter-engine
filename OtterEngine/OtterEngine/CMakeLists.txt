@@ -1,6 +1,11 @@
 ﻿cmake_minimum_required (VERSION 3.8)
 project (OtterEngine)
 
+# Now simply link against gtest or gtest_main as needed. Eg
+#add_executable(example example.cpp)
+#target_link_libraries(example gtest_main)
+#add_test(NAME example_test COMMAND example)
+
 #Set the sources for the OtterEngine
 set (SOURCEFILES
 	src/OtterEngine.cpp
@@ -26,3 +31,7 @@ target_include_directories( ${PROJECT_EXE}
 target_include_directories( ${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/include
 )
+
+#tests
+add_executable(TestsOtterEngine tests/Example.cpp)
+target_link_libraries(TestsOtterEngine PRIVATE gtest_main)

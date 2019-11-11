@@ -8,6 +8,7 @@ project (GlobalProject)
 # Incluez les sous-projets.
 add_subdirectory (OtterEngine)
 add_subdirectory (MathEngine)
+add_subdirectory (GoogleTest)
 
 set(SRCS 
 	main.cpp
