@@ -28,3 +28,11 @@ TEST(VectorTest, TestDefaultConstructorCorrectlyGenerateAVector3D) {
   EXPECT_EQ(0, defaultVector.y);
   EXPECT_EQ(0, defaultVector.z);
 }
+
+TEST(VectorTest, TestMagnitudeOfAVector) {
+  Vector3D vectorWithAMagnitudeOf1(1, 0, 0);
+  Vector3D vectorWithAMagnitudeOf17(15, 0, -8);
+
+  EXPECT_EQ(1, vectorWithAMagnitudeOf1.Magnitude());
+  EXPECT_EQ(17, vectorWithAMagnitudeOf17.Magnitude());
+}

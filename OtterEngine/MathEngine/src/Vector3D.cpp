@@ -1,4 +1,5 @@
 #include "Vector3D.hpp"
+#include <math.h>
 
 Vector3D::Vector3D() : Vector3D(0, 0, 0) {
 }
@@ -25,4 +26,8 @@ Vector3D Vector3D::Add(Vector3D other) {
 
   Vector3D newVector(newX, newY, newZ);
   return newVector;
+}
+
+float Vector3D::Magnitude() {
+  return sqrt(x * x + y * y + z * z);
 }

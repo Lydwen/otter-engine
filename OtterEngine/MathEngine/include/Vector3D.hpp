@@ -8,4 +8,5 @@ struct Vector3D {
 
   Vector3D Vector3D::operator+(Vector3D other);
   Vector3D Vector3D::Add(Vector3D other);
+  float Vector3D::Magnitude();
 };
