@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
-#include "MathEngine.h"
+#include "Vector3.hpp"
 
 TEST(VectorTest, TestAddTwoVectorsWillCorrectlyMakeTheAdditionOfTheirMembers) {
-  Vector vectorLeft(1, 2, 3);
-  Vector vectorRight(10, 20, 30);
+  Vector3 vectorLeft(1, 2, 3);
+  Vector3 vectorRight(10, 20, 30);
 
-  Vector result = vectorLeft.Add(vectorRight);
-  EXPECT_EQ(11, result.GetX());
-  EXPECT_EQ(22, result.GetY());
-  EXPECT_EQ(33, result.GetZ());
+  Vector3 result = vectorLeft.Add(vectorRight);
+  EXPECT_EQ(11, result.x);
+  EXPECT_EQ(22, result.y);
+  EXPECT_EQ(33, result.z);
 
 }

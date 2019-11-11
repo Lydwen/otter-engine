@@ -9,9 +9,11 @@ project (MathEngine)
 #Set the sources for the OtterEngine
 set (SOURCEFILES
 	src/MathEngine.cpp
+	src/Vector3.cpp
 )
 set(HEADERS
 	include/MathEngine.h
+	include/Vector3.hpp
 )
 set (MAIN src/Main.cpp)
 set(PROJECT_EXE ${PROJECT_NAME}Exe)
