@@ -10,13 +10,16 @@ set(HEADERS
 	include/MathEngine.h
 )
 
+set (MAIN src/Main.cpp)
 
-add_executable(${PROJECT_NAME}Exe ${HEADERS} ${SOURCEFILES})
+set(PROJECT_EXE ${PROJECT_NAME}Exe)
+
+add_executable(${PROJECT_EXE} ${SOURCEFILES} ${HEADERS} ${MAIN})
 #Add library with all these sources
 add_library(${PROJECT_NAME} ${SOURCEFILES} ${HEADERS})
 add_library(sub::MathEngine ALIAS ${PROJECT_NAME})
 
-target_include_directories( ${PROJECT_NAME}Exe
+target_include_directories( ${PROJECT_EXE}
     PUBLIC ${PROJECT_SOURCE_DIR}/include
 )
 

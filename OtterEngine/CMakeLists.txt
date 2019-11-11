@@ -8,3 +8,11 @@ project (GlobalProject)
 # Incluez les sous-projets.
 add_subdirectory (OtterEngine)
 add_subdirectory (MathEngine)
+
+set(SRCS 
+	main.cpp
+	)
+
+add_executable(main ${SRCS})
+target_link_libraries(main OtterEngine)
+target_link_libraries(main MathEngine)
