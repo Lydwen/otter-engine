@@ -1,5 +1,8 @@
 #include "Vector3D.hpp"
 
+Vector3D::Vector3D() : Vector3D(0, 0, 0) {
+}
+
 Vector3D::Vector3D(float x1, float y1, float z1){
   x = x1;
   y = y1;

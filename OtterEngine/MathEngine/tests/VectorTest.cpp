@@ -20,3 +20,11 @@ TEST(VectorTest, TestOverloadOperatorPlus) {
   EXPECT_EQ(22, result.y);
   EXPECT_EQ(33, result.z);
 }
+
+TEST(VectorTest, TestDefaultConstructorCorrectlyGenerateAVector3D) {
+  Vector3D defaultVector;
+
+  EXPECT_EQ(0, defaultVector.x);
+  EXPECT_EQ(0, defaultVector.y);
+  EXPECT_EQ(0, defaultVector.z);
+}
